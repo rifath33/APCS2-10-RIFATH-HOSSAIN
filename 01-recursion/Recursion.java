@@ -2,13 +2,16 @@ public class Recursion{
     
     /*
     *@param s any string
-    *@return a string that is the reversed version of s, do NOT use built in methods to do so, use recursion.
+    *@return a string that is the reversed version of s, do NOT use built in methods to do so,
+      use recursion.
     */
     public static String reverse(String s){
         
         if(s.length() <= 1)
         return s;
         else{
+            
+            return s.charAt(s.length()-1) + reverse(s.substring(0, s.length()-1));
             
         }
         
@@ -21,6 +24,9 @@ public class Recursion{
     */
     public static double sqrt(double n){
       //Hint: This is a wrapper method.
+      
+      return n;
+      
     }
     
     
@@ -51,12 +57,12 @@ public class Recursion{
     
     
     
-    public static void countNoDoubleLetterWords(int length, char[] letters){
+/*     public static void countNoDoubleLetterWords(int length, char[] letters){
 
     char[] characters = {};
     print countNoDoubleLetterWords(length,"", characters);
 
-    }
+    } */
     
     
     
