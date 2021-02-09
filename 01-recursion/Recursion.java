@@ -32,16 +32,17 @@ public class Recursion{
       
       if( 
         
-        (
+        Math.abs(
         (double) ( ( Math.pow(guess,2) - target ) / target )
-        * 100
         )
         
         <= 0.001
    
         )
       return guess;
-      
+      else{
+        return sqrtHelper( ((target/guess + guess) / 2), target);
+      }
 
 
     }
