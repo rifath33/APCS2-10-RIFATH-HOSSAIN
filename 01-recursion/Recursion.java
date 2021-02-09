@@ -24,18 +24,21 @@ public class Recursion{
     public static double sqrt(double n){
       //Hint: This is a wrapper method.
       
-      return sqrtHelper(n/2);
+      return sqrtHelper(n/2, n);
       
     }
     
-    public static double sqrtHelper(double guess){
+    public static double sqrtHelper(double guess, double target){
       
       if( 
         
-        ( (Math.round( Math.pow(guess,2) * 100,000 ) ) / 100,000 ) // roundedGuess
-        == 
-        ( (Math.round( Math.pow(n) * 100,000 ) ) / 100,000 ) //roundedN
+        (
+        (double) ( ( Math.pow(guess,2) - target ) / target )
+        * 100
+        )
         
+        <= 0.001
+   
         )
       return guess;
       
