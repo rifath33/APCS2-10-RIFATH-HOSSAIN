@@ -17,7 +17,6 @@ public class Recursion{
         
     }
     
-    
     /*
     *@param n any non-negative value you want to take the sqrt of
     *@return the approximate sqrt of n within a tolerance of 0.001%
@@ -25,8 +24,23 @@ public class Recursion{
     public static double sqrt(double n){
       //Hint: This is a wrapper method.
       
-      return n;
+      return sqrtHelper(n/2);
       
+    }
+    
+    public static double sqrtHelper(double guess){
+      
+      if( 
+        
+        ( (Math.round( Math.pow(guess,2) * 100,000 ) ) / 100,000 ) // roundedGuess
+        == 
+        ( (Math.round( Math.pow(n) * 100,000 ) ) / 100,000 ) //roundedN
+        
+        )
+      return guess;
+      
+
+
     }
     
     
