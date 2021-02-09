@@ -2,7 +2,7 @@ public class Tester{
     
     public static void main(String[] args){
         
-        System.out.println(Recursion.sqrt(90));
+        System.out.println(Recursion.countNoDoubleLetterWords(3,""));
     }
     
 }

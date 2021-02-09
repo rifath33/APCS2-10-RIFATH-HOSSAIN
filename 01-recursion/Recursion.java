@@ -47,40 +47,35 @@ public class Recursion{
 
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-/*     public static void countNoDoubleLetterWords(int length, char[] letters){
-
-    char[] characters = {};
-    print countNoDoubleLetterWords(length,"", characters);
-
-    } */
+    /*
+    *@param length how long the words must be
+    *param word the variable to store the partial solution (should start at "")
+    *@return the number of words that have no adjacent matching letters using the letters a-z.
+    *Repetition allowed except when letters are adjacent.
+    */
+    public static long countNoDoubleLetterWords(int length,String word){
+      
+      char[] letters = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+      
+      int size = word.length();
+      
+      if(length == 0){
+          return 0;
+      }
+      else{
+          
+          for(int i = 0; i < letters.length; i++){
+            
+              if(size==0 || word.charAt(size -1) != letters[i] ){
+                  return 1 + countNoDoubleLetterWords(length-1, word);
+              }
+              
+          }
+         return countNoDoubleLetterWords(length-1, word); 
+      }
+        
+      //Hint: not a wrapper method, but you must call it starting with "" as your word.
+    }
     
     
     
